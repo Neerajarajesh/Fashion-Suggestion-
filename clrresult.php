@@ -1,6 +1,8 @@
-<?php session_start(); ?>
+
 <?php
 include 'mp_connect.php';
+
+include 'top_menu.php';
 
  
 $selected_eye = isset($_POST['q1']) ? $_POST['q1'] : null;

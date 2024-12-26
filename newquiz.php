@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+include 'top_menu.php';
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -179,6 +182,11 @@
            <br><br> <button type="submit" class="submit-btn">Analyse</button>
         </form>
     </div>
-    <footer>© 2024 Ember Elle</footer>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+        <button style="margin-left:48%;" onclick="goBack()">Go Back</button>
 </body>
 </html>

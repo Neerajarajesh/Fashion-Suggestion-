@@ -1,5 +1,8 @@
 <?php
+include 'top_menu.php';
+
 include 'mp_connect.php';
+
 
 // Get the selected skin type from the POST request (radio button selection)
 $skinType = $_POST['skinType'];

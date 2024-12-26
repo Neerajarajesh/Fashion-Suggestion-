@@ -97,25 +97,25 @@ button{
     <div class="profile-item">
         <strong>Eye Color:</strong>
         <input type="text" name="eye_color" value="<?php echo htmlspecialchars($row['EyeColour']); ?>" placeholder="Enter your eye color">
-        <a href="newquiz.html">Take the survey</a>
+        <a href="newquiz.php">Take the survey</a>
     </div>
 
     <div class="profile-item">
         <strong>Hair Color:</strong>
         <input type="text" name="hair_color" value="<?php echo htmlspecialchars($row['HairColour']); ?>" placeholder="Enter your hair color">
-        <a href="newquiz.html">Take the survey</a>
+        <a href="newquiz.php">Take the survey</a>
     </div>
 
     <div class="profile-item">
         <strong>Undertone:</strong>
         <input type="text" name="undertone" value="<?php echo htmlspecialchars($row['UnderTone']); ?>" placeholder="Enter your undertone">
-        <a href="newquiz.html">Take the survey</a>
+        <a href="newquiz.php">Take the survey</a>
     </div>
 
     <div class="profile-item">
         <strong>Skin Tone:</strong>
         <input type="text" name="skin_tone" value="<?php echo htmlspecialchars($row['SkinTone']); ?>" placeholder="Enter your skin tone">
-        <a href="quiz1.php">Take the survey</a>
+        <a href="newquiz.php">Take the survey</a>
     </div>
 
     <div class="profile-item">

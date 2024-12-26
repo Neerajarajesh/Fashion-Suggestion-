@@ -12,7 +12,7 @@ include'top_menu.php';
 
     <style>
         body {background-image: url('images/body1.jpg');
- 		background-size: cover; 
+            background-size: contain;  
             font-family: Arial, sans-serif;
             background-color: ;
             height: 100vh;
@@ -68,6 +68,12 @@ include'top_menu.php';
             border-radius: 4px;
             background-color: #f9f9f9;
         }
+        #special-button {
+            margin-top: 20px;
+            background-color:grey;
+            margin-left:45%;
+        }
+
     </style>
 </head>
 <body>
@@ -147,8 +153,8 @@ $result = mysqli_query($conn, $sql);
     function goBack() {
         window.history.back();
     }
-</script>
-        <button onclick="goBack()">Go Back</button>
+    </script>
+        <button id="special-button"  onclick="goBack()">Go Back</button>
     
 </body>
 </html>

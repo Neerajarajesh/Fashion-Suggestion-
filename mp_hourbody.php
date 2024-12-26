@@ -1,3 +1,7 @@
+<?php
+
+include 'top_menu.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,7 +106,7 @@
 
         <script src="script.js"></script>
 
-        <p><a href="mp_outfit.php">Go back to User Input Page</a></p>
+        <p><a href="mp_outfit.php">Go back</a></p>
     </div>
 </body>
 </html>

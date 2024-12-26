@@ -8,8 +8,8 @@ include'top_menu.php';
     <title>Login Page</title>
     <style>
         body {background-image: url('images/bg1.jpg');
- 		background-size: cover; 
-
+ 		
+            background-size: contain; 
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             

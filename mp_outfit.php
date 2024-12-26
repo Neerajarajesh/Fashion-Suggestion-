@@ -161,6 +161,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="links">
             <p>If you do not know your body type, you can <a href="mp_bodytypecalculator.php">calculate it here</a>.</p>
         </div>
+        <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+        <button style="margin-left:35%;"  onclick="goBack()">Go Back</button>
     </main>
 </body>
 </html>

@@ -297,7 +297,7 @@ https://templatemo.com/tm-590-topic-listing
                                     
                                     <li>
                                         <h4 class="text-white mb-3">Take the colour analysis survey</h4>
-					<p class="text-white"><a href=quiz1.php>To take survey</a></p>
+					<p class="text-white"><a href=newquiz.php>To take survey</a></p>
 
                                        
 

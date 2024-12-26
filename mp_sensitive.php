@@ -1,5 +1,6 @@
 <?php
 include("mp_connect.php");
+include 'top_menu.php';
 $skinType = 'sensitive';
 
 $query = "SELECT * FROM SkinType WHERE SkinType = ?";
