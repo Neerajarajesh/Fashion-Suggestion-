@@ -54,119 +54,105 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        
-        .container {
-            margin-top: 50px;
-            max-width: 700px;
-        }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-image: url('WhatsAp.jpeg'); /* Background image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #333;
+    }
 
-        h2 {
-            font-weight: 600;
-            color: #007bff;
-            margin-bottom: 30px;
-        }
+    .container {
+        margin-top: 100px; /* Increased margin to move the box further down */
+        max-width: 700px;
+        background: rgba(255, 255, 255, 0.5); /* Adjusted transparency (0.7) for better blending */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a cleaner look */
+    }
 
-        .form-group label {
-            font-weight: 500;
-        }
 
-        .form-control {
-            border-radius: 8px;
-            padding: 10px;
-            font-size: 16px;
-        }
+    h2 {
+        font-weight: 600;
+        color: #007bff;
+        margin-bottom: 30px;
+    }
 
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            padding: 10px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
+    .form-group label {
+        font-weight: 500;
+    }
 
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
+    .form-control {
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+    }
 
-        .btn-block {
-            padding: 10px;
-            font-size: 18px;
-            border-radius: 10px;
-        }
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
 
-        .quiz-section {
-            display: none; /* Initially hidden */
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
 
-        .quiz-section h5 {
-            margin-bottom: 15px;
-            color: #555;
-        }
+    .btn-block {
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
 
-        .quiz-section .form-group {
-            margin-bottom: 15px;
-        }
+    #back-box {
+        margin-top: 20px;
+        text-align: center;
+        background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 10px;
+    }
 
-        #quizResult {
-            display: none;
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 18px;
-            background-color: #d4edda;
-            border-color: #c3e6cb;
-            color: #155724;
-            border-radius: 8px;
-        }
+    #back-box a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
 
-        /* Tooltip styling for better UX */
-        .form-group label button {
-            background: none;
-            border: none;
-            color: #007bff;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
+    #back-box a:hover {
+        text-decoration: underline;
+    }
+</style>
 
-        .form-group label button:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     
-    <main class="container">
-        <h2>Outfit Suggestions</h2>
-        <form action="" method="post">
-            <div class="form-group">
-                <label for="bodyType">Enter Your Body Type:</label>
-                <input type="text" id="bodyType" name="bodyType" placeholder="Hour Glass, Inverted Triangle, Apple, Rectangle, Pear Shaped" required class="form-control">
-            </div>
-            <input type="submit" value="Submit" class="btn btn-primary btn-block">
-        </form>
-        <?php
-        // Display the warning message if it exists
-        if (!empty($message)) {
-            echo "<p style='color:red;'>$message</p>";
-        }
-        ?>
-        <div id="links">
-            <p>If you do not know your body type, you can <a href="mp_bodytypecalculator.php">calculate it here</a>.</p>
+<main class="container">
+    <h2>Outfit Suggestions</h2>
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="bodyType">Enter Your Body Type:</label>
+            <input type="text" id="bodyType" name="bodyType" placeholder="Hour Glass, Inverted Triangle, Apple, Rectangle, Pear Shaped" required class="form-control">
         </div>
-        <script>
-    function goBack() {
-        window.history.back();
+        <input type="submit" value="Submit" class="btn btn-primary btn-block">
+    </form>
+    <?php
+    // Display the warning message if it exists
+    if (!empty($message)) {
+        echo "<p style='color:red;'>$message</p>";
     }
-    </script>
-        <button style="margin-left:35%;"  onclick="goBack()">Go Back</button>
-    </main>
+    ?>
+    <div id="links">
+        <p>If you do not know your body type, you can <a href="mp_bodytypecalculator.php">calculate it here</a>.</p>
+    </div>
+    <div id="back-box">
+        <a href="index.php">Go Back</a>
+    </div>
+</main>
+
 </body>
 </html>
