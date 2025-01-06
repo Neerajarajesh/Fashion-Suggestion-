@@ -8,22 +8,36 @@ include 'top_menu.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Types</title>
     <link rel="stylesheet" href="style2.css"> <!-- Link to your CSS file -->
+    <!-- Import Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
             margin: 20px;
-            background-color: #f4f4f4;
+            background-image: url('2151891319.jpg'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center;
         }
-        h1, h2 {
+        h2 {
+            font-size: 35px;
             text-align: center;
-            color: #333;
+            color: #EC7063; /* Heading color */
+        }
+        h1 {
+            font-size: 40px; /* Slightly bigger font size for "Understanding Skin Types" */
+            text-align: center;
+            color: #E74C3C;
         }
         .section {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.5); /* Set transparency */
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin: 10px 0;
+            max-width: 800px; /* Adjustable width */
+            margin-left: auto;
+            margin-right: auto; /* Center the containers */
+            font-size: 18px;
         }
         ul {
             list-style-type: disc;
@@ -32,7 +46,7 @@ include 'top_menu.php';
         .center-img {
             display: block;
             margin: 0 auto;
-            max-width: 50%; /* Adjust the size as needed */
+            max-width: 35%; /* Adjust the size as needed */
             height: auto; /* Maintain aspect ratio */
         }
         .skin-img {
@@ -42,17 +56,22 @@ include 'top_menu.php';
             margin: 10px auto;
         }
         .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .skin-type {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 10px 0;
-        }
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #EC7063; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    clear: both; /* Ensure the button appears below previous elements */
+}
+
+.back-link:hover {
+    background-color: #D35400; /* Darker shade on hover */
+}
 
     </style>
 </head>

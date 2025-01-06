@@ -9,44 +9,86 @@ include 'top_menu.php';
     <title>Hourglass Body Shape</title>
     <link rel="stylesheet" href="styleoutfit.css">
     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('2149033906.jpg'); /* Background image */
+            background-size: cover; /* Ensures image covers entire background */
+            background-repeat: no-repeat; /* Prevents tiling of the image */
+            background-attachment: fixed; /* Fixes the image while scrolling */
+            color: #333; /* Text color for better readability */
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 50px auto; /* Adds some space at the top */
+            background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a clean look */
         }
+
+        /* Change the color of headings to #A91F72 */
+        h1, h2 {
+            color: #A21210;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .tips-avoid-section {
             display: flex;
             justify-content: space-between;
         }
+
         .tips-box, .avoid-box {
             width: 48%;
             padding: 10px;
             border: 1px solid #ddd;
             background-color: #f9f9f9;
+            border-radius: 10px;
         }
         .tips-box ul, .avoid-box ul {
-            font-size: 16px; 
-            line-height: 1.5;
-            margin-left: 20px; 
-        }
+    font-size: 16px; 
+    line-height: 1.5;
+    margin-left: 20px;  /* Default left margin */
+    padding-left: 15px; /* Increase indentation of list items */
+}
+
         .gallery-container {
-            text-align: center;
-            margin: 20px 0;
-            position: relative; /* Ensures the arrows are placed inside this container */
-        }
+    text-align: center;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    position: relative; /* So arrows are correctly aligned */
+}
+
+
         .gallery-container img {
             max-width: 400px;
             width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
+
+        /* Style for navigation arrows */
         .prev, .next {
             cursor: pointer;
-            font-size: 30px; /* Increased the size of arrows for better visibility */
+            font-size: 30px;
             padding: 10px;
-            background-color: #ccc;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
             border: none;
             position: absolute;
-            top: 45%;
+            top: 50%;
             transform: translateY(-50%);
-            z-index: 10; /* Ensures the arrows stay on top of the image */
+            z-index: 1; /* Makes sure arrows are visible above the image */
         }
 
         .prev {
@@ -57,9 +99,23 @@ include 'top_menu.php';
             right: 10px;
         }
 
-        .description {
-            margin-top: 10px;
-            font-size: 18px;
+        /* 'Go back' link box style */
+        .go-back-box {
+            background-color: #A21210;
+            color: white;
+            padding: 10px;
+            width: fit-content;
+            margin-top: 20px;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .go-back-box a {
+            color: white;
+        }
+
+        .go-back-box a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -74,7 +130,7 @@ include 'top_menu.php';
        <!-- Side by side tips and avoid sections -->
         <div class="tips-avoid-section">
             <div class="tips-box">
-                <h2>Tips for Dressing this Body Shape</h2>
+                <h2>Additional Tips:</h2>
                 <ul style="list-style-type:circle">
                      <li>Emphasize your bust and neckline with V-neck tops.</li>
                     <li>Wear empire waistlines to elongate your torso.</li>
@@ -85,7 +141,7 @@ include 'top_menu.php';
 	     </div>
 
             <div class="avoid-box">
-                <h2>What to Avoid While Dressing this Body Shape</h2>
+                <h2>What to Avoid:</h2>
                 <ul style="list-style-type:circle">
                     <li>Avoid overly tight clothing around the waist.</li>
                     <li>Steer clear of bulky fabrics that add volume to the midsection.</li>
@@ -102,10 +158,12 @@ include 'top_menu.php';
             <img id="appleImage" src="osug/Round shape - necklines.jpg" alt="Apple Body Image">
             <button class="next" onclick="changeImage('apple', 1)">&#10095;</button>
         </div>
-
+<!-- 'Go back' box inside the container -->
+<div class="go-back-box">
+            <a href="mp_outfit.php">Go back</a>
+        </div>
         <script src="script.js"></script>
 
-        <p><a href="mp_outfit.php">Go back</a></p>
     </div>
 </body>
 </html>
